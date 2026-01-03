@@ -43,7 +43,7 @@ def test_get_calendar(spark):
             st.StructField('DayName', st.StringType(), True),
             st.StructField('MonthName', st.StringType(), True),
             st.StructField('MonthNumberOfYear', st.IntegerType(), True),
-            st.StructField('DayNumberOfWeek', st.IntegerType(), True),
+            st.StructField('DayNumberOfYear', st.IntegerType(), True),
             st.StructField('WeekNumberOfYear', st.IntegerType(), True),
             st.StructField('CalendarQuarter', st.IntegerType(), True),
             st.StructField('CalendarYear', st.IntegerType(), True),
@@ -51,7 +51,7 @@ def test_get_calendar(spark):
             st.StructField('FiscalSemester', st.IntegerType(), True),
             st.StructField('FiscalQuarter', st.IntegerType(), True),
             st.StructField('FinMonthNumberOfYear', st.IntegerType(), True),
-            st.StructField('DayNumberOfMonth', st.IntegerType(), False),
+            st.StructField('DayNumberOfMonth', st.IntegerType(), True),
             st.StructField('MonthID', st.IntegerType(), True),
         ]
     )
