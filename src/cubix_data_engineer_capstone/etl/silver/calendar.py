@@ -10,8 +10,8 @@ def get_calendar(calendar_raw: DataFrame) -> DataFrame:
     2. Cast them explicitly.
     3. Drop duplicates.
 
-    :param calendar_raw: Raw Calendar DataFrame.
-    :return: Transformed Calendar DataFrame.
+    :param calendar_raw:    Raw Calendar DataFrame.
+    :return:                Transformed Calendar DataFrame.
     '''
 
     return (
