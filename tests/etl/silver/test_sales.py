@@ -1,7 +1,7 @@
 import pyspark.sql.types as st
 import pyspark.testing as spark_testing
 from cubix_data_engineer_capstone.etl.silver.sales import get_sales
-from datetime import datetime
+from datetime import date
 
 
 def test_get_sales(spark):
@@ -44,10 +44,10 @@ def test_get_sales(spark):
         [
             (
                 'son_1',
-                datetime(2023, 1, 1),
+                date(2023, 1, 1),
                 1,
                 1,
-                datetime(2023, 1, 6),
+                date(2023, 1, 6),
                 1
             )
         ],
