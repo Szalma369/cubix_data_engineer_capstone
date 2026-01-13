@@ -12,11 +12,11 @@ def test_get_customers(spark):
     test_data = spark.createDataFrame(
         [
             # include - sample to keep
-            ('1', 'name_1', '1980-01-01', 'M', 'F', '50000', '0', 'occ_1', '1', '1', 'addr_1', 'addr_2', '000-000-000', 'extra_value'),  # noqa E501
+            ('1', 'name_1', '1980-01-01', 'M', 'F', '50000', '0', 'occ_1', '1', '1', 'addr_1', 'addr_2', '000-000-000', 'extra_value'),  # noqa: E501
             # exclude - duplicate
-            ('1', 'name_1', '1980-01-01', 'M', 'F', '50000', '0', 'occ_1', '1', '1', 'addr_1', 'addr_2', '000-000-000', 'extra_value'),  # noqa E501
+            ('1', 'name_1', '1980-01-01', 'M', 'F', '50000', '0', 'occ_1', '1', '1', 'addr_1', 'addr_2', '000-000-000', 'extra_value'),  # noqa: E501
             # include - MaritalStatus / Gender = None, YearlyIncome = 50001
-            ('2', 'name_2', '1980-01-01', None, None, '50001', '0', 'occ_2', '1', '1', 'addr_3', 'addr_4', '000-000-000', 'extra_value')  # noqa E501
+            ('2', 'name_2', '1980-01-01', None, None, '50001', '0', 'occ_2', '1', '1', 'addr_3', 'addr_4', '000-000-000', 'extra_value')  # noqa: E501
         ],
         schema=[
             'ck',
