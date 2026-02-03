@@ -2,7 +2,7 @@ import pyspark.sql.functions as F
 from pyspark.sql import DataFrame
 
 
-def get_daily_product_category(wide_sales: DataFrame) -> DataFrame:
+def get_daily_product_category_metrics(wide_sales: DataFrame) -> DataFrame:
     '''
     Calculates daily product category from the wide_sales DataFrame.
 

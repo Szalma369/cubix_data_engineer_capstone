@@ -1,10 +1,10 @@
 from decimal import Decimal
 import pyspark.sql.types as st
 import pyspark.testing as spark_testing
-from cubix_data_engineer_capstone.etl.gold.daily_product_category import get_daily_product_category
+from cubix_data_engineer_capstone.etl.gold.daily_product_category_metrics import get_daily_product_category_metrics
 
 
-def test_get_daily_product_category(spark):
+def test_get_daily_product_category_metrics(spark):
     '''
     Positive test that the function get_daily_product_category returns the expected DataFrame.
     '''
@@ -23,7 +23,7 @@ def test_get_daily_product_category(spark):
     ])
     wide_sales_test = spark.createDataFrame(wide_sales_test_data, schema=wide_sales_test_schema)
 
-    result = get_daily_product_category(wide_sales_test)
+    result = get_daily_product_category_metrics(wide_sales_test)
 
     expected_schema = st.StructType([
         st.StructField('EnglishProductCategoryName', st.StringType(), True),
